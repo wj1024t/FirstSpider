@@ -87,7 +87,19 @@ class SunSpider(scrapy.Spider):
     # 八掛海
     # url = 'https://javdb.com/actors/p33Qb?t=s,d&sort_type=0&page='
     # 鈴原愛蜜莉
-    url = 'https://javdb.com/actors/98Yp?t=s,d&sort_type=0&page='
+    # url = 'https://javdb.com/actors/98Yp?t=s,d&sort_type=0&page='
+    #
+    # 大橋未久
+    # url = 'https://javdb.com/actors/21Jp?t=s,d&sort_type=0&page='
+    # url = 'https://javdb.com/actors/0JEb?t=s,d&sort_type=0&page='
+    # 麻倉憂(無碼)
+    # url = 'https://javdb.com/actors/21Jp?t=s,d&sort_type=0&page='
+    # url = 'https://javdb.com/actors/OmM0?t=s,d&sort_type=0&page='
+    # 河合明日菜
+    # url = 'https://javdb.com/actors/69A0?t=s,d&sort_type=0&page='
+    # 美空あやか
+    # url = 'https://javdb.com/actors/ap64?t=s,d&sort_type=0&page='
+    url = 'https://javdb.com/actors/OXZO?t=s,d&sort_type=0&page='
 
     # top 250
     # url = 'https://javdb.com/rankings/top?page='
@@ -107,22 +119,24 @@ class SunSpider(scrapy.Spider):
             "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36"}
         # 指定cookies
 
-        cookies = {'list_mode': 'h',
-                   'theme': 'auto',
-                   'locale': 'zh',
-                   '_rucaptcha_session_id': 'f9f730c6f4e89189a0846f6a0a7fe8d0',
-                   'over18': '1',
-                   '_ym_uid': '169997592689178066',
-                   '_ym_d': '1699975926',
-                   '_ym_isad': '1',
-                   'remember_me_token': 'eyJfcmFpbHMiOnsibWVzc2FnZSI6IkltVjRXVXBvV2pGNGFrdDJaMjVCWTJreFVrTkxJZz09IiwiZXhwIjoiMjAyMy0xMS0yMVQxNTozMjo0OS4wMDBaIiwicHVyIjoiY29va2llLnJlbWVtYmVyX21lX3Rva2VuIn19--f1a1db3cef4edefbc84f9d7d07682e3c14d01773',
-                   'cf_clearance': '7mmQ.tpmFsnusp58smh1cImU8QINjBWUYACyiIu7RQg-1699976950-0-1-4900e024.27442b3a.c4e8671a-0.2.1699976950',
-                   '_jdb_session': 'ynH0dtF0P9NicWghmOei1MxknBBSxM5oq5PHPJQz7zbVCRIjrDNh+xYBYznCtbKELQK31nB1oDjXbDpWINZGAsW9M1ToI/avbvVazZDgA24nCCBMtGQMmed7K+AK1hojKwwDXzAYcmaR6RosuBcATn/8sJIr5WjWYVRb7sTSVZgQApn+W4HqaD2cOlQxTEUJeNaMkgEytiPFOGqUUWmlaem0v8kkrvijuIxTLGfoXG2v750xOcM8yHhemU+Zg/i52bxbTO0zgxZAmixRlHdq+Y0u16vjEnuXjFtugVINlmnuDL1VtIQ0rMp3dhLayOsAEsSW0l0/CqYKJH+qJohrQR3ZJwySny6XnQbOnT6MiMb6qMn/kQFPiSs+GmhDkA==--ZdFEsQh4JU8Ypu+T--9ZPm7LFfRtf+7PbzZJpCCg=='
-
-                   }
+        # cookies = {'list_mode': 'h',
+        #            'theme': 'auto',
+        #            'locale': 'zh',
+        #            '_rucaptcha_session_id': 'f9f730c6f4e89189a0846f6a0a7fe8d0',
+        #            'over18': '1',
+        #            '_ym_uid': '169997592689178066',
+        #            '_ym_d': '1699975926',
+        #            '_ym_isad': '1',
+        #            'remember_me_token': 'eyJfcmFpbHMiOnsibWVzc2FnZSI6IkltVjRXVXBvV2pGNGFrdDJaMjVCWTJreFVrTkxJZz09IiwiZXhwIjoiMjAyMy0xMS0yMVQxNTozMjo0OS4wMDBaIiwicHVyIjoiY29va2llLnJlbWVtYmVyX21lX3Rva2VuIn19--f1a1db3cef4edefbc84f9d7d07682e3c14d01773',
+        #            'cf_clearance': '7mmQ.tpmFsnusp58smh1cImU8QINjBWUYACyiIu7RQg-1699976950-0-1-4900e024.27442b3a.c4e8671a-0.2.1699976950',
+        #            '_jdb_session': 'ynH0dtF0P9NicWghmOei1MxknBBSxM5oq5PHPJQz7zbVCRIjrDNh+xYBYznCtbKELQK31nB1oDjXbDpWINZGAsW9M1ToI/avbvVazZDgA24nCCBMtGQMmed7K+AK1hojKwwDXzAYcmaR6RosuBcATn/8sJIr5WjWYVRb7sTSVZgQApn+W4HqaD2cOlQxTEUJeNaMkgEytiPFOGqUUWmlaem0v8kkrvijuIxTLGfoXG2v750xOcM8yHhemU+Zg/i52bxbTO0zgxZAmixRlHdq+Y0u16vjEnuXjFtugVINlmnuDL1VtIQ0rMp3dhLayOsAEsSW0l0/CqYKJH+qJohrQR3ZJwySny6XnQbOnT6MiMb6qMn/kQFPiSs+GmhDkA==--ZdFEsQh4JU8Ypu+T--9ZPm7LFfRtf+7PbzZJpCCg=='
+        #
+        #            }
 
         # 再次请求到详情页，并且声明回调函数callback，dont_filter=True 不进行域名过滤，meta给回调函数传递数据
-        yield scrapy.Request(url=self.url + '1', headers=headers, cookies=cookies, callback=self.parse,
+        # yield scrapy.Request(url=self.url + '1', headers=headers, cookies=cookies, callback=self.parse,
+        #                      dont_filter=True)
+        yield scrapy.Request(url=self.url + '1', headers=headers, callback=self.parse,
                              dont_filter=True)
 
     def parse(self, response):
