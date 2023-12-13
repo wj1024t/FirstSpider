@@ -102,10 +102,14 @@ class SunSpider(scrapy.Spider):
     # url = 'https://javdb.com/actors/OXZO?t=s,d&sort_type=0&page='
     # 佐仓绊
     # url = 'https://javdb.com/actors/ap64?t=s,d&sort_type=0&page='
-    url = 'https://javdb.com/actors/pRDB?t=s,d&sort_type=0&page='
+    # url = 'https://javdb.com/actors/pRDB?t=s,d&sort_type=0&page='
     # 本庄鈴♀
     # url = 'https://javdb.com/actors/ap64?t=s,d&sort_type=0&page='
-    url = 'https://javdb.com/actors/BzpA?t=s,d&sort_type=0&page='
+    # url = 'https://javdb.com/actors/BzpA?t=s,d&sort_type=0&page='
+    # 星宫一花
+    # url = 'https://javdb.com/actors/vd2n?t=s,d&sort_type=0&page='
+    # 愛音麻里亞
+    url = 'https://javdb.com/actors/Ng03?t=s,d&sort_type=0&page='
 
     # top 250
     # url = 'https://javdb.com/rankings/top?page='
